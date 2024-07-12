@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CounterPhish Warning</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <style>
+        body {
+            background: linear-gradient(#e66465, #541919);
+            color: white;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            text-align: center;
+        }
+        .warning-box {
+            background-color: rgba(105, 34, 34, 0.5);
+            padding: 50px;
+            border-radius: 10px;
+            
+            border-radius: 16px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        h1 {
+            font-size: 36px;
+        }
+        p {
+            font-size: 18px;
+        }
+        a {
+            color: rgb(255, 187, 187);
+        }
+    </style>
+</head>
+<body>
+    <div class="warning-box">
+        <h1>⚠️ Warning: Potentially Dangerous Site ⚠️</h1>
+        <p id="warningMessage"></p>
+        <p>This alert comes from the CounterPhish browser extension.</p>
+        <p>More about this extension can be found <a href="https://github.com/0xw01f/CounterPhish" target="_blank">here</a>.</p>
+        
+    </div>
+    <script src="warning.js"></script>
+</body>
+</html>

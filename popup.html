@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CounterPhish</title>
+  <meta charset="UTF-8">
+  <style>
+    body {
+      width: 320px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: #f0f4f8;
+      color: #333;
+    }
+    h2 {
+      color: #2c3e50;
+      text-align: center;
+      margin-top: 0;
+    }
+    .input-group {
+      margin-bottom: 15px;
+    }
+    input {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #bdc3c7;
+      border-radius: 4px;
+      font-size: 14px;
+      box-sizing: border-box;
+    }
+    button {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      border-radius: 4px;
+      color: white;
+      font-size: 14px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    #addToWhitelist {
+      background-color: #27ae60;
+    }
+    #addToWhitelist:hover {
+      background-color: #2ecc71;
+    }
+    #addToBlacklist {
+      background-color: #c0392b;
+    }
+    #addToBlacklist:hover {
+      background-color: #e74c3c;
+    }
+    h3 {
+      color: #34495e;
+      margin-top: 20px;
+      margin-bottom: 10px;
+    }
+    ul {
+      list-style-type: none;
+      padding: 0;
+      max-height: 150px;
+      overflow-y: auto;
+      border: 1px solid #bdc3c7;
+      border-radius: 4px;
+      background-color: white;
+    }
+    li {
+      padding: 8px 10px;
+      border-bottom: 1px solid #ecf0f1;
+    }
+    li:last-child {
+      border-bottom: none;
+    }
+    .list-container {
+      margin-bottom: 15px;
+    }
+
+    .remove {
+        cursor: pointer;
+        transition: color 0.3s ease;
+    }
+
+    .remove:hover {
+        color: red;
+    }
+  </style>
+</head>
+<body>
+  <h2>CounterPhish</h2>
+  <div class="input-group">
+    <input type="text" id="domainInput" placeholder="Enter domain">
+  </div>
+  <div class="input-group">
+    <button id="addToWhitelist">Add to Whitelist</button>
+  </div>
+  <div class="input-group">
+    <button id="addToBlacklist">Add to Blacklist</button>
+  </div>
+  <div class="list-container">
+    <h3>Whitelist</h3>
+    <ul id="whitelistDisplay"></ul>
+  </div>
+  <div class="list-container">
+    <h3>Blacklist</h3>
+    <ul id="blacklistDisplay"></ul>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
